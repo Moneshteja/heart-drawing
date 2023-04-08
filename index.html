@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heart Symbol</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      
+      .heart {
+        width: 200px;
+        height: 200px;
+        position: relative;
+      }
+
+      .heart:before,
+      .heart:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 100px;
+        width: 100px;
+        height: 160px;
+        background-color: red;
+        border-radius: 100px 100px 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+      }
+
+      .heart:after {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heart"></div>
+  </body>
+</html>
